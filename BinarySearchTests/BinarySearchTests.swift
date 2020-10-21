@@ -18,16 +18,54 @@ class BinarySearchTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBinarySearchIsNotNil() throws {
+        let bs = BinarySearch()
+        XCTAssertNotNil(bs)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testThatBinarySearchCanFindAValueGiveACollectionWithASingleValue() {
+        let bs = BinarySearch()
+        let output = bs.search([1], 1)
+        let expected = 1
+        
+        XCTAssertEqual(output, expected)
     }
-
+    
+    func testThatBinarySearchCanFindAValueInACollectionOfSizeTwo() {
+        let bs = BinarySearch()
+        let output = bs.search([1,2], 2)
+        let expected = 2
+        
+        XCTAssertEqual(output, expected)
+    }
+    
+    func testThatBinarySearchCanLocateAValueInALargerCollection() {
+        let bs = BinarySearch()
+        let output = bs.search([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16], 1)
+        let expected  = 1
+        
+        XCTAssertEqual(output, expected)
+    }
+    
+    func testThatBinarySearchTreeWillReturnNillWhenValueNotFound() {
+        let bs = BinarySearch()
+        let output = bs.search([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16], 17)
+        
+        
+        XCTAssertNil(output)
+    }
+    
+    func testThatRefactorWorks(){
+        var values = [1,2,3,4,5]
+        let output = values.binarySearch(forElement: 2)
+        
+        XCTAssertTrue(output)
+    }
+    
+    func testThatRefactorWorksForCaseWhenNotValuee() {
+        var values = [1,2,3,4,5,6]
+        let output = values.binarySearch(forElement: 100)
+        
+        XCTAssertFalse(output)
+    }
 }

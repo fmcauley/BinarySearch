@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F08C7F8B2540A21E00666A4C /* BinarySearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08C7F812540A21D00666A4C /* BinarySearch.framework */; };
 		F08C7F902540A21E00666A4C /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C7F8F2540A21E00666A4C /* BinarySearchTests.swift */; };
-		F08C7F922540A21E00666A4C /* BinarySearch.h in Headers */ = {isa = PBXBuildFile; fileRef = F08C7F842540A21D00666A4C /* BinarySearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F08C7FA02540A2C100666A4C /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C7F9F2540A2C100666A4C /* BinarySearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		F08C7F812540A21D00666A4C /* BinarySearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BinarySearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F08C7F842540A21D00666A4C /* BinarySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
 		F08C7F852540A21D00666A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F08C7F8A2540A21D00666A4C /* BinarySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinarySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08C7F8F2540A21E00666A4C /* BinarySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
 		F08C7F912540A21E00666A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F08C7F9F2540A2C100666A4C /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 		F08C7F832540A21D00666A4C /* BinarySearch */ = {
 			isa = PBXGroup;
 			children = (
-				F08C7F842540A21D00666A4C /* BinarySearch.h */,
 				F08C7F852540A21D00666A4C /* Info.plist */,
+				F08C7F9F2540A2C100666A4C /* BinarySearch.swift */,
 			);
 			path = BinarySearch;
 			sourceTree = "<group>";
@@ -93,7 +93,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08C7F922540A21E00666A4C /* BinarySearch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +146,7 @@
 				TargetAttributes = {
 					F08C7F802540A21D00666A4C = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 					F08C7F892540A21D00666A4C = {
 						CreatedOnToolsVersion = 12.0;
@@ -194,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08C7FA02540A2C100666A4C /* BinarySearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +341,7 @@
 		F08C7F962540A21E00666A4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -357,6 +359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fm.BinarySearch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -364,6 +367,7 @@
 		F08C7F972540A21E00666A4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -388,6 +392,7 @@
 		F08C7F992540A21E00666A4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T2XWZFPH38;
@@ -406,6 +411,7 @@
 		F08C7F9A2540A21E00666A4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T2XWZFPH38;
